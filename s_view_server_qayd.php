@@ -65,28 +65,28 @@ if(empty($limit)) { $limit = 100;} */
                                       
                     <?php 
                      if ($admin == 1 || $admin == 7  || $admin == 5){
-                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study&print_logo=">طباعة نموذج 1</a>';
+                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study&print_logo=">طباعة الدراسات (أ)</a>';
 
-                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=">طباعة نموذج 2</a>';
+                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=">طباعة الدراسات (ب)</a>';
 
-                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study3&print_logo=">طباعة نموذج 3</a>';
+                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study3&print_logo=">طباعة الدراسات (ج)</a>';
 
-                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study4&print_logo=">طباعة نموذج 4</a>';
+                      echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study4&print_logo=">طباعة الدراسات (د)</a>';
                       
                       if (strpos($jeha_profile, 'داخلي') !== false){
-                        echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=&type_print=study_120">طباعة نموذج داخلي</a>';
+                        echo '<a class="btn btn-danger btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=&type_print_all=1">طباعة الموظفين</a>';
                       }
                       
-                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study&print_logo=424">طباعة ترويسة حكومة 1</a>';
+                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study&print_logo=424">طباعة الدراسات (أ) -424</a>';
 
-                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=424">طباعة ترويسة حكومة 2</a>';
+                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study2&print_logo=424">طباعة الدراسات (ب) -424</a>';
 
-                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study3&print_logo=424">طباعة ترويسة حكومة 3</a>';
+                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study3&print_logo=424">طباعة الدراسات (ج) -424</a>';
 
-                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study4&print_logo=424">طباعة ترويسة حكومة 4</a>';
+                      echo '<a class="btn btn-secondary btn_remove" target="_blank" href="print-elements.php?jeha='.$jeha1.'&details_type='.$details_type.'&type=ketab_all_study4&print_logo=424">طباعة الدراسات (د) -424</a>';
 
                      }
-                   
+                    
                      include_once "query/getJehat_server_view.php";
                     
                       if (!empty($details_type)){ ?>
@@ -99,6 +99,8 @@ if(empty($limit)) { $limit = 100;} */
       </div>
 
             <?php 
+            // ============ إضافة الـ Popup لعرض نتائج تحديث جدول المتابعة ============
+            include_once "tracking_result_modal.php";
             include_once "inc/footer_server.php";
             include_once "inc/footer_view_server_all.php";
             ?>
